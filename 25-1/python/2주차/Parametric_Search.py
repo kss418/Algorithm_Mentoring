@@ -1,7 +1,7 @@
-def maximazation():
-    # 정답의 범위는 1 ~ 2^31 - 1
+def maximization():
+    # 정답의 범위는 1 ~ N
     lo = 1
-    hi = 2 ** 31 - 1
+    hi = N
     while lo < hi:
         mid = (lo + hi + 1) // 2 # 중간값
         # 결정 문제의 답이 1 이면
@@ -15,10 +15,10 @@ def maximazation():
             hi = mid - 1
     return lo
 
-def minimazation():
-    # 정답의 범위는 1 ~ l
+def minimization():
+    # 정답의 범위는 1 ~ N
     lo = 1
-    hi = l
+    hi = N
     while(lo < hi):
         mid = (lo + hi) // 2 # 중간값
         # 결정 문제의 답이 1 이면
@@ -31,3 +31,4 @@ def minimazation():
         else:
             lo = mid + 1
     return lo
+
