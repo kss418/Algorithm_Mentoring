@@ -14,7 +14,7 @@ bool decision(long long cur){
     return cnt >= m;
 }
 
-int maximazation(){
+int maximization(){
     // 정답의 범위는 1 ~ 2^31 - 1
     long long lo = 1, hi = (1 << 31) - 1;
     while(lo < hi){
@@ -34,7 +34,7 @@ int maximazation(){
 int main(){
     cin >> n >> m;
     for(int i = 1;i <= n;i++) cin >> a[i];
-    cout << maximazation(); // 최댓값 출력
+    cout << maximization(); // 최댓값 출력
 
     return 0;
 }
