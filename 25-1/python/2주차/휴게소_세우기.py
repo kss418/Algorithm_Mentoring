@@ -21,7 +21,7 @@ def decision(cur):
     # 아니면 0
     return cnt <= m
 
-def minimazation():
+def minimization():
     # 정답의 범위는 1 ~ l
     lo = 1
     hi = l
@@ -38,5 +38,5 @@ def minimazation():
             lo = mid + 1
     return lo
 
-print(minimazation())
+print(minimization())
 
