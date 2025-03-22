@@ -19,7 +19,7 @@ bool decision(int cur){
     return cnt <= m;
 }
 
-int minimazation(){
+int minimization(){
     // 정답의 범위는 1 ~ l
     int lo = 1, hi = l;
     while(lo < hi){
@@ -42,7 +42,7 @@ int main(){
     a[0] = 0; a[n + 1] = l; // 시작점 0, 끝점 l
     sort(a, a + n + 2); // 정렬
 
-    cout << minimazation();
+    cout << minimization();
     return 0;
 }
 
