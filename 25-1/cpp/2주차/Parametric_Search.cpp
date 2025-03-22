@@ -1,8 +1,8 @@
 #include <iostream>
 
-int minimazation(){
-    // 정답의 범위는 1 ~ l
-    int lo = 1, hi = l;
+int minimization(){
+    // 정답의 범위는 1 ~ N
+    int lo = 1, hi = N;
     while(lo < hi){
         int mid = (lo + hi) / 2; // 중간값
         // 결정 문제의 답이 1 이면 
@@ -17,9 +17,9 @@ int minimazation(){
     return lo;
 }
 
-int maximazation(){
-    // 정답의 범위는 1 ~ 2^31 - 1
-    long long lo = 1, hi = (1 << 31) - 1;
+int maximization(){
+    // 정답의 범위는 1 ~ N
+    long long lo = 1, hi = N;
     while(lo < hi){
         long long mid = (lo + hi + 1) / 2; // 중간값
         // 결정 문제의 답이 1 이면 
