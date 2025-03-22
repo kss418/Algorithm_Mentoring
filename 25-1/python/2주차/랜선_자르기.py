@@ -14,7 +14,7 @@ def decision(cur):
     # 만들 수 있는 랜선의 개수가 M 이상이면 1 아니면 0 반환
     return cnt >= m
 
-def maximazation():
+def maximization():
     # 정답의 범위는 1 ~ 2^31 - 1
     lo = 1
     hi = 2 ** 31 - 1
@@ -31,5 +31,5 @@ def maximazation():
             hi = mid - 1
     return lo
 
-print(maximazation())
+print(maximization())
 
