@@ -4,21 +4,6 @@
 using namespace std;
 
 stack <pair <int, int>> st;
-void comp(){
-    if(st.size() <= 1) return; // 크기가 1이면 종료
-
-    auto top = st.top(); st.pop();
-    // 연속된 두개의 값이 다르면
-    // 다시 스택에 넣고 종료
-    if(st.top().first != top.first){
-        st.push(top); return;
-    }
-
-    // 연속된 두개의 값이 같으면 개수를 합쳐줌
-    int num = st.top().second + top.second;
-    st.pop(); st.push({top.first, num});
-}
-
 int a[501010];
 int main(){
     fastio;
@@ -46,9 +31,6 @@ int main(){
             // 같은 값들끼리는 서로 볼 수 있으므로 정답에 더함
             result += num - 1;
         }
-
-        // 스택 압축
-        comp();
 
         // 스택의 값이 2개 이상이면 정답에 1 추가
         if(st.size() >= 2) result++;
