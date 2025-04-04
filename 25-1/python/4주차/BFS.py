@@ -2,7 +2,7 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 v = [0] * 10
-a = [[]] * 10
+a = [[] for _ in range(10)]
 
 def add(s, e):
     # 양방향 간선 추가
