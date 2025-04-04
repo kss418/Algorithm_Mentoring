@@ -27,8 +27,8 @@ int main(){
     ios::sync_with_stdio(0); // fastio
     cin.tie(0), cout.tie(0); // fastio
 
-    add(1, 2); add(1, 3); add(1, 4); 
-    add(3, 4); add(4, 5);
+    add(1, 2); add(2, 4); add(2, 5); 
+    add(1, 3); add(3, 6); add(6, 7);
     dfs(1);
 
     return 0;

@@ -20,9 +20,10 @@ def dfs(cur):
         dfs(nxt)
 
 add(1, 2)
+add(2, 4)
+add(2, 5)
 add(1, 3)
-add(1, 4)
-add(3, 4)
-add(4, 5)
+add(3, 6)
+add(6, 7)
 
 dfs(1)
