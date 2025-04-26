@@ -15,6 +15,7 @@ def solve(cur, turn):
 
     for i in [-1, -3, -4]:
         nxt = cur + i
+        # 돌은 음수가 될 수 없음
         if nxt < 0: 
             break
 
