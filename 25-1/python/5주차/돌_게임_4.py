@@ -27,3 +27,4 @@ def solve(cur, turn):
     return dp[cur][turn]
 
 print("CY" if solve(n, 0) == 1 else "SK")
+
