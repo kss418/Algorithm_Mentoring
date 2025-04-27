@@ -15,6 +15,7 @@ ll solve(ll cur, ll num){
     // 0으로 시작하는 계단 수는 계단 수가 아님
     if(cur == 1) return ret = num ? 1 : 0;
 
+    // 이전의 수와 현재 수가 한개 차이가 나야 함
     ret += solve(cur - 1, num + 1) % MOD;
     ret += solve(cur - 1, num - 1) % MOD;
 
@@ -30,6 +31,7 @@ int main(){
         for(int j = 0;j <= 9;j++) dp[i][j] = -1;
     }
 
+    // 0 ~ 9의 합이 정답
     for(int i = 0;i <= 9;i++){
         result += solve(n, i);
         result %= MOD;
