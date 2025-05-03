@@ -9,6 +9,7 @@ def solve(cy, cx):
     if dp[cy][cx] != -1:
         return dp[cy][cx]
 
+    # Base Case
     if cy == 1 and cx == 1:
         dp[cy][cx] = 1
         return 1
@@ -17,9 +18,11 @@ def solve(cy, cx):
     for i in range(4):
         ny = cy + dy[i]
         nx = cx + dx[i]
+        # 격자 밖이면 건너 뜀
         if not (1 <= ny <= n and 1 <= nx <= m):
             continue
-
+        
+        # 내리막 길이 아니면 건너 뜀
         if a[ny][nx] <= a[cy][cx]:
             continue
         ret += solve(ny, nx)

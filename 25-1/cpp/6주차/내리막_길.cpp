@@ -13,11 +13,14 @@ bool outrange(ll cy, ll cx){
 ll solve(ll cy, ll cx){
     ll& ret = dp[cy][cx];
     if(ret != -1) return ret; ret = 0;
+    // Base Case
     if(cy == 1 && cx == 1) return ret = 1;
 
     for(int i = 0;i < 4;i++){
         ll ny = cy + dy[i], nx = cx + dx[i];
+        // 격자 밖이면 건너 뜀
         if(outrange(ny, nx)) continue;
+        // 내리막 길이 아니면 건너 뜀
         if(a[ny][nx] <= a[cy][cx]) continue;
         ret += solve(ny, nx);
     }
