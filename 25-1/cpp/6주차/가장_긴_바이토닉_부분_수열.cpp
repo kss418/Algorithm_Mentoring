@@ -9,12 +9,16 @@ ll solve(ll cur, ll cnt){
     ll& ret = dp[cur][cnt];
     if(ret != -1) return ret; ret = 1;
 
+    // 감소하는 상태
     if(cnt) for(int i = 1;i < cur;i++){
+        // 이전 값이 현재 값보다 작으면 건너 뜀
         if(a[i] <= a[cur]) continue;
         ret = max(ret, solve(i, 0) + 1);
         ret = max(ret, solve(i, 1) + 1);
     }
+    // 증가하는 상태
     else for(int i = 1;i < cur;i++){
+        // 이전 값이 현재 값보다 크면 건너 뜀
         if(a[i] >= a[cur]) continue;
         ret = max(ret, solve(i, 0) + 1);
     }
@@ -34,6 +38,7 @@ int main(){
 
     ll result = 0;
     for(int i = 1;i <= n;i++){
+        // DP[i][0], DP[i][1] 중 최댓값이 정답
         result = max(result, max(solve(i, 0), solve(i, 1)));
     }
     cout << result;
