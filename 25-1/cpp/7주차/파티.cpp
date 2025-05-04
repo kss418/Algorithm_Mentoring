@@ -19,7 +19,9 @@ int main(){
     cin >> n >> m >> x;
     while(m--){
         ll s, e, c; cin >> s >> e >> c;
+        // 정방향 간선
         adj[s][0].push_back({e, c});
+        // 역방향 간선
         adj[e][1].push_back({s, c});
     }
 
@@ -45,6 +47,7 @@ int main(){
 
     ll result = 0;
     for(int i = 1;i <= n;i++){
+        // 역방향 간선 + 정방향 간선의 최댓값
         result = max(result, d[i][0] + d[i][1]);
     }
     cout << result;
