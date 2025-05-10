@@ -40,7 +40,10 @@ void run(){
 
     ll cnt = 0, result = 0;
     for(int i = 1;i <= n;i++){
+        // 바이러스에 감염되지 않았으면 건너 뜀
         if(d[i] == INF) continue;
+
+        // 개수 증가 및 최댓값 갱신
         cnt++; result = max(result, d[i]);
     }
 

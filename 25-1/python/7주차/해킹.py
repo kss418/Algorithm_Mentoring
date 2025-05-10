@@ -36,8 +36,11 @@ def run():
     cnt = 0
     result = 0
     for i in range(1, n + 1):
+        # 바이러스에 감염되지 않았으면 건너 뜀
         if d[i] == INF:
             continue
+
+        # 개수 증가 및 최댓값 갱신
         cnt += 1
         result = max(result, d[i])
     print(cnt, result)
@@ -48,3 +51,5 @@ adj = [[] for _ in range(MAX)]
 pq = []
 for _ in range(t):
     run()
+
+    ㄴ
