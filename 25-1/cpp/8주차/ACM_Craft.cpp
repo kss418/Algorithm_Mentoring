@@ -13,12 +13,14 @@ queue <ll> q;
 
 void run(){
     cin >> n >> m;
+    // 값 입력 및 초기화
     for(int i = 1;i <= n;i++){
         cin >> a[i];
         dp[i] = ind[i] = 0;
         adj[i].clear();
     }
 
+    // 간선 입력
     while(m--){
         ll s, e; cin >> s >> e;
         adj[s].push_back(e);
@@ -32,8 +34,11 @@ void run(){
     
     while(!q.empty()){
         ll cur = q.front(); q.pop();
+        // 현재 DP값에 현재 건물 짓는 데 걸리는 시간 추가
         dp[cur] += a[cur];
         for(auto& nxt : adj[cur]){
+            // 다음 DP 값은 이전의 건물을 짓는 데 드는 
+            // 시간 중 최댓값으로 갱신
             dp[nxt] = max(dp[nxt], dp[cur]);
             if(!--ind[nxt]) q.push(nxt);
         }
