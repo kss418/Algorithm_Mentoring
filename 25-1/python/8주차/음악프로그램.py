@@ -5,7 +5,6 @@ input = sys.stdin.readline
 MAX = 1010
 INF = 10**12
 
-
 n, m = map(int, input().split())
 ind = [0] * MAX
 a = [0] * MAX

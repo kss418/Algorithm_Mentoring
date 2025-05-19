@@ -27,3 +27,4 @@ while pq:
         ind[nxt] -= 1
         if ind[nxt] == 0:
             heapq.heappush(pq, nxt)
+ㄴ
